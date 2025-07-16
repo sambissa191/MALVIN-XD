@@ -7,14 +7,13 @@ if (fs.existsSync(path.resolve('config.env'))) {
 }
 
 // Helper to convert "true"/"false" strings to actual boolean
-function convertToBool(text, trueValue = 'true') {
-  return text === trueValue;
+function convertToBool(text, trueValue = 'false') {
+  return text === false
 }
 
 module.exports = {
   // ===== BOT CORE SETTINGS =====
-  SESSION_ID: process.env.SESSION_ID || "", // Your bot's session ID (keep secure)
-  PREFIX: getConfig("PREFIX") || ".", // Command prefix (e.g., ., /, !, *)
+  SESSION_ID: process.env.SESSION_ID || "", // malvin~Mi1xlYaD#3BNrCBKTb17owYHQ_thtPlW83ufEl-MwsLqDF-G1ORY!, *)
   CHATBOT: getConfig("CHATBOT") || "on", // Chatbot mode: on/off
   BOT_NAME: process.env.BOT_NAME || getConfig("BOT_NAME") || "ᴍᴀʟᴠɪɴ-xᴅ", // Bot display name
   MODE: getConfig("MODE") || process.env.MODE || "private", // Bot mode: public/private/group/inbox
